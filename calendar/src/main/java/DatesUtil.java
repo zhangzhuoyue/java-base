@@ -24,7 +24,7 @@ public class DatesUtil {
     public static Date getDayBegin(){
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY,0);//Calendar.HOUR_OF_DAY是24小时制;Calendar.HOUR是12小时制
-        cal.set(Calendar.MINUTE,0);
+        cal.set(Calendar.MINUTE,0);//set设置时间值。
         cal.set(Calendar.SECOND,0);
         cal.set(Calendar.MILLISECOND,0);//毫秒 1秒=1000毫秒
         return cal.getTime();
@@ -48,7 +48,7 @@ public class DatesUtil {
         * */
         Calendar cal = new GregorianCalendar();
         cal.setTime(getDayBegin());
-        cal.add(Calendar.DAY_OF_MONTH,-1);//对时间加减法
+        cal.add(Calendar.DAY_OF_MONTH,-1);//add 对日期增减
         return cal.getTime();
     }
 
