@@ -1,3 +1,4 @@
+import com.sun.xml.internal.bind.v2.WellKnownNamespace;
 import org.junit.Test;
 
 
@@ -21,7 +22,7 @@ public class DatesUtil {
 
     @Test
     public void test(){
-        Date dayBegin =  getEndDayOfYesterday();
+        Date dayBegin =  getEndDayOfNextWeek();
         //Date dayEnd = getDayEnd();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String format1 = format.format(dayBegin);
@@ -82,6 +83,92 @@ public class DatesUtil {
         Calendar cal = new GregorianCalendar();
         cal.setTime(getDayEnd());
         cal.add(Calendar.DAY_OF_MONTH,1);
+        return cal.getTime();
+    }
+
+    //获取本周的开始时间
+    public Date getBeginDayOfWeek(){
+        Date date = new Date();
+        if (date == null){
+            return  null;
+        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int week = cal.get(Calendar.DAY_OF_WEEK);
+        if (week == 1){
+            week = week + 1;
+        }
+        cal.add(Calendar.DATE,2-week);
+        return getDayStartTime(cal.getTime());
+    }
+
+    //获取本周的结束时间
+    public Date getEndDayOfWeek(){
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(getBeginDayOfWeek());
+        cal.add(Calendar.DAY_OF_WEEK,6);
+        return getDayEndTime(cal.getTime());
+
+    }
+
+    //获取上周开始时间时间
+    public Date getBeginDayOfLastWeek(){
+        Calendar cal = Calendar.getInstance();
+        Date date = new Date();
+        cal.setTime(date);
+        int weekDay = cal.get(Calendar.DAY_OF_WEEK);
+        if (weekDay == 1) weekDay += 1;
+        cal.add(Calendar.DAY_OF_WEEK,2 - weekDay -7);
+        return getDayStartTime(cal.getTime());
+    }
+
+    //获取上周结束时间
+    public Date getEndDayOfLastWeek(){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(getBeginDayOfLastWeek());
+        cal.add(Calendar.DATE,6);
+        return getDayEndTime(cal.getTime());
+    }
+
+    //获取下周的开始时间
+    public Date getBeginDayOfNextWeek(){
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int week = cal.get(Calendar.DAY_OF_WEEK);
+        if (week == 1) week += 1 ;
+        cal.add(Calendar.DAY_OF_WEEK,2-week+7);
+        return getDayStartTime(cal.getTime());
+    }
+
+    //获取下周的结束时间
+    public Date getEndDayOfNextWeek(){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(getBeginDayOfNextWeek());
+        cal.add(Calendar.DAY_OF_WEEK,6);
+        return getDayEndTime(cal.getTime());
+    }
+
+
+    //获取某个日期的开始时间
+    public Date getDayStartTime(Date date){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.HOUR_OF_DAY,0);
+        cal.set(Calendar.MINUTE,0);
+        cal.set(Calendar.SECOND,0);
+        cal.set(Calendar.MILLISECOND,0);
+        return cal.getTime();
+    }
+
+    //获取某个日期的结束时间
+    public Date getDayEndTime(Date date){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.HOUR_OF_DAY,23);
+        cal.set(Calendar.MINUTE,59);
+        cal.set(Calendar.SECOND,59);
         return cal.getTime();
     }
 
