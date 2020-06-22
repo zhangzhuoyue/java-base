@@ -155,7 +155,7 @@ public class DatesUtil {
 
     @Test
     public void test2() {
-        Date dayBegin =  getBeginDayOfMonth();
+        Date dayBegin = getEndDayOfYear();
         //Date dayEnd = getDayEnd();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String format1 = format.format(dayBegin);
@@ -164,17 +164,53 @@ public class DatesUtil {
     }
 
     //本月开始时间
-    public Date getBeginDayOfMonth(){
+    public Date getBeginDayOfMonth() {
         Calendar cal = Calendar.getInstance();
-        cal.set(getNowYear(),getNowMonth()-1,1);
+        cal.set(getNowYear(), getNowMonth() - 1, 1);
         return getDayStartTime(cal.getTime());
     }
+
     //本月结束时间
-    public Date getEndDayOfMonth(){
+    public Date getEndDayOfMonth() {
         Calendar cal = Calendar.getInstance();
-        cal.set(getNowYear(),getNowMonth()-1,1);
-        //cal.getActualMaximum();
-        return null;
+        cal.set(getNowYear(), getNowMonth() - 1, 1);
+        int day = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        cal.set(getNowYear(), getNowMonth() - 1, day);
+        return getDayEndTime(cal.getTime());
+    }
+
+    //获取上月开始时间
+    public Date getBeginDayOfLastMonth() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(getNowYear(), getNowMonth() - 2, 1);
+        return getDayStartTime(cal.getTime());
+    }
+
+    //获取上月的结束时间
+    public Date getEndDayOfLastMonth() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(getNowYear(), getNowMonth() - 2, 1);
+        int day = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        cal.set(getNowYear(), getNowMonth() - 2, day);
+        return getDayEndTime(cal.getTime());
+    }
+
+    //获取本年的开始时间
+    public Date getBeginDayOfYear() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, getNowYear());
+        cal.set(Calendar.MONTH, Calendar.JANUARY);
+        cal.set(Calendar.DATE, 1);
+        return getDayStartTime(cal.getTime());
+    }
+
+    //本年的结束时间
+    public Date getEndDayOfYear() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, getNowYear());
+        cal.set(Calendar.MONTH, Calendar.DECEMBER);
+        cal.set(Calendar.DATE, 31);
+        return getDayEndTime(cal.getTime());
     }
 
     //获取今年是哪一年
@@ -215,6 +251,23 @@ public class DatesUtil {
         cal.set(Calendar.MINUTE, 59);
         cal.set(Calendar.SECOND, 59);
         return cal.getTime();
+    }
+
+    @Test
+    public void test3() {
+        int diffDays = getDiffDays(getBeginDayOfLastWeek(), getEndDayOfNextWeek());
+        System.out.println(diffDays);
+    }
+
+    //两个日期相减得到天数
+    public static int getDiffDays(Date beginDate, Date endDate) {
+        if (beginDate == null || endDate == null) {
+            throw  new  IllegalArgumentException("getDiffDays params is null");
+        }
+
+        long diff = (endDate.getTime() - beginDate.getTime()) / (1000 * 60 * 60 * 24);
+        int days = new Long(diff).intValue();
+        return days;
     }
 
 
