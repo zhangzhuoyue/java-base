@@ -20,6 +20,16 @@ Calendar.DAY_OF_YEAR的主要作用是cal.get(DAY_OF_YEAR)，用来获得这一�
 * month是从0开始的，而月份是从1开始的，所以month需要加 1
 * 星期： 1表示星期日 ，2表示星期一，依次推断
 *
+*
+* Date1.after(Date2),当Date1大于Date2时，返回TRUE，当小于等于时，返回false；
+即Date2比Date1小的true/false，当Date2日期比Date1小的时候为true，否则为false
+
+Date1.before(Date2)，当Date1小于Date2时，返回TRUE，当大于等于时，返回false；
+
+如果业务数据存在相等的时候，而且相等时也需要做相应的业务判断或处理时，请注意。
+
+如果有这样的需求，在某个日期内的业务check，那么你需要使用：！Date1.after(Date2)
+
 * */
 public class DatesUtil {
 
@@ -255,7 +265,7 @@ public class DatesUtil {
 
     @Test
     public void test3() {
-        int diffDays = getDiffDays(getBeginDayOfLastWeek(), getEndDayOfNextWeek());
+        Date diffDays = min(getBeginDayOfLastWeek(), getEndDayOfNextWeek());
         System.out.println(diffDays);
     }
 
@@ -268,6 +278,58 @@ public class DatesUtil {
         long diff = (endDate.getTime() - beginDate.getTime()) / (1000 * 60 * 60 * 24);
         int days = new Long(diff).intValue();
         return days;
+    }
+
+    //两个日期相减得到的毫秒数
+    public long dateDiff(Date beginDate,Date endDate){
+        long beginTime = beginDate.getTime();
+        long endTime = endDate.getTime();
+        return endTime - beginTime;
+    }
+
+    //获取两个日期中最大日期
+
+    public Date max(Date beginDate , Date endDate){
+        if (beginDate == null){
+            return endDate;
+        }
+        if (endDate == null){
+            return beginDate;
+        }
+        if (beginDate.after(endDate)){
+            return beginDate;
+        }
+        return endDate;
+    }
+
+    //获取两个日期最小日期
+    public Date min(Date beginDate,Date endDate){
+        if (beginDate == null){
+            return endDate;
+        }
+        if (endDate == null){
+            return beginDate;
+        }
+        if (beginDate.after(endDate)){
+            return endDate;
+        }
+        return beginDate;
+    }
+
+    //返回某个日期后几天的日期
+    public Date getNextDay(Date date ,int i){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.DATE,cal.get(Calendar.DATE)+i);
+        return cal.getTime();
+    }
+
+    //返回某个日期前几天的日期
+    public Date getFrontDay(Date date , int i){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.DATE,cal.get(Calendar.DATE)-i);
+        return cal.getTime();
     }
 
 
