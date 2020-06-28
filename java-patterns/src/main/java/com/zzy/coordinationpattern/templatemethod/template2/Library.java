@@ -1,4 +1,4 @@
-package com.zzy.templatemethod.template2;
+package com.zzy.coordinationpattern.templatemethod.template2;
 
 /**
  * @author zzy
