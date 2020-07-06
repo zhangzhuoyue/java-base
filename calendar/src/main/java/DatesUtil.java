@@ -265,6 +265,11 @@ public class DatesUtil {
 
     @Test
     public void test3() {
+
+        Date date = new Date();
+        java.sql.Date  d = new java.sql.Date(date.getTime());
+        System.out.println(d);
+
         Date diffDays = min(getBeginDayOfLastWeek(), getEndDayOfNextWeek());
         System.out.println(diffDays);
     }
