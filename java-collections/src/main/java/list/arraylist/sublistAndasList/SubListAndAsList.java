@@ -1,4 +1,4 @@
-package list.arraylist.sublistAndasList;
+package main.java.list.arraylist.sublistAndasList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
