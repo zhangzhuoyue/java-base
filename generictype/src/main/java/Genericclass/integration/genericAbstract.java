@@ -1,4 +1,4 @@
-package Genericclass;
+package Genericclass.integration;
 
 /**
  * @author zzy

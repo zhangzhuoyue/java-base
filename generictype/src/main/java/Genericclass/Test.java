@@ -1,5 +1,12 @@
 package Genericclass;
 
+import Genericclass.integration.GenericInterface;
+import Genericclass.integration.GenericInterfaceStudent;
+import Genericclass.method.Persion;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author zzy
  * @date 2020/7/9 23:06
@@ -7,7 +14,9 @@ package Genericclass;
 public class Test {
 
     public static void main(String[] args) {
-        GenericPersion<String> stringGenericStudent = new GenericStudent<>();
-        String name = stringGenericStudent.getName();
+
+        //Persion stringPersion = new Persion<ArrayList,Integer>();
     }
+
+
 }
