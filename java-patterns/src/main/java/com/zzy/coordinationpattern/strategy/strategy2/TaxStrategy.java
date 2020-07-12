@@ -2,6 +2,7 @@ package com.zzy.coordinationpattern.strategy.strategy2;
 
 /**
  * @author zzy
+ * @deprecated 税法的抽象父类
  * @date 2020/6/28 16:23
  */
 

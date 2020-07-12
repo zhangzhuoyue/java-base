@@ -2,13 +2,14 @@ package com.zzy.coordinationpattern.strategy.strategy2;
 
 /**
  * @author zzy
+ * @desc 税法计算类，对外提供提供的稳定的客户端
  * @date 2020/6/28 16:28
  */
 
 /**
  * strategy客户端在全过程中是稳定的，对于算法子类变化。由抽象类隔离
  */
-public class SalesOrder {
+public class SalesOrder extends USTax {
 
     private TaxStrategy taxStrategy;
 
