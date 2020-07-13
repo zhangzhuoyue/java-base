@@ -6,8 +6,6 @@ public enum ResponseEnum {
      * 1. SUCCESS_STATUS 对象在实例化使用无参构造器
      * 2. SUCCESS_STATUS("200","成功") 使用有参构造器
      * 3. 构造器默认的权限修饰符 private
-     *
-     * 2.
      */
     //查询用户成功返回码
     SUCCESS_STATUS("200","成功"),
