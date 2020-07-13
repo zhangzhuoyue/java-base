@@ -2,10 +2,10 @@ package com.zzy.myenum;
 
 public enum ResponseEnum {
     /**
-     * 1. &#x679a;&#x4e3e;&#x9879;&#x662f;&#x672c;&#x7c7b;&#x5b9e;&#x4f8b;&#xff0c;
-     *    1. SUCCESS_STATUS &#x5bf9;&#x8c61;&#x5728;&#x5b9e;&#x4f8b;&#x5316;&#x4f7f;&#x7528;&#x65e0;&#x53c2;&#x6784;&#x9020;&#x5668;
-     *    2. SUCCESS_STATUS("200","&#x6210;&#x529f;") &#x4f7f;&#x7528;&#x6709;&#x53c2;&#x6784;&#x9020;&#x5668;
-     *    3. &#x6784;&#x9020;&#x5668;&#x9ed8;&#x8ba4;&#x7684;&#x6743;&#x9650;&#x4fee;&#x9970;&#x7b26; private
+     * 1. 枚举项是本类实例，
+     * 1. SUCCESS_STATUS 对象在实例化使用无参构造器
+     * 2. SUCCESS_STATUS("200","成功") 使用有参构造器
+     * 3. 构造器默认的权限修饰符 private
      *
      * 2.
      */
