@@ -2,7 +2,7 @@ package com.zzy.coordinationpattern.observer.template2;
 
 /**
  * @author zhangyue666
- * @description 分割文件主题【稳定】
+ * @description 分割文件主题【稳定】，只支持单个通知，并不是真正的观察者设计模式
  * @date 2020/7/14 21:42
  */
 
