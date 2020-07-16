@@ -13,7 +13,7 @@ import java.util.List;
  * ObjectAnalyer
  *
  * @author Administrator
- * @desc 使用反射实现公共的toString
+ * @desc 使用反射实现通用的toString()
  * @time 2020/7/16 14:14
  **/
 public class ObjectAnalyer {
@@ -49,7 +49,8 @@ public class ObjectAnalyer {
         do {
             r += "[";
             Field[] fields = cl.getDeclaredFields();
-            AccessibleObject.setAccessible(fields,true); //批量的给对象中所有的元素赋给权限
+            AccessibleObject.setAccessible(fields,true); //设置对象数组可访问标志的快捷方式
+            //isAccessible()通过反射对象的可访问标志的值
             for (Field field : fields){
 
                 if (!Modifier.isStatic(field.getModifiers())){ //判断当前域是不是静态
