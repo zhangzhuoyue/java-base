@@ -1,4 +1,4 @@
-package field;
+package java.field;
 
 import java.lang.reflect.Field;
 
@@ -13,7 +13,7 @@ public class GainField {
 
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         GainField gainField = new GainField();
-        gainField.getFieldValue(new Student("23",34));
+        gainField.getFieldValue(new field.Student("23",34));
     }
 
     /**
