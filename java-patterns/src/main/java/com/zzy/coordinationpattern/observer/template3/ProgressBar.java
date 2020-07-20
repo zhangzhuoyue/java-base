@@ -5,9 +5,12 @@ package com.zzy.coordinationpattern.observer.template3;
  * @description 具体的通知控件
  * @date 2020/7/14 22:06
  */
-public class ProgressBar {
+public class ProgressBar implements  IProgress{
 
-    public void setValue(double progress){
+
+
+    @Override
+    public void dprogress(double progress) {
         //进度条操作
     }
 }
