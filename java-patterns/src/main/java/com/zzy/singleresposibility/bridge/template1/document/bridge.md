@@ -1,0 +1,5 @@
+1. MobileMessageLite、PCMessageLite出现结构性重复【使用继承的原因】，他们内部的功能实现都是基于相同的抽象函数，这个时候可以
+想到使用组合来消除这种重复性
+
+2. MobileMessagePerfert、PCMessagerPerfect 出现结构性重复【使用继承的原因】，他们的内部功能都是基于相同的抽象函数实现
+，自然想到可以使用组合来消除重复
