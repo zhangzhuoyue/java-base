@@ -1,4 +1,4 @@
-package checkclassconstructor;
+package java.checkclassconstructor;
 
 import java.lang.reflect.*;
 import java.util.Scanner;
