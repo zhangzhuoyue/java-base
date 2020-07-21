@@ -9,24 +9,27 @@ import com.zzy.singleresposibility.bridge.template3.code.MessagerImpl;
  * @date 2020/7/20 21:21
  */
 //业务抽象
-public class MessagePerfert implements Messager {
+public class MessagePerfert extends Messagers {
 
+    public MessagePerfert(MessagerImpl messagerImpl) {
+        super(messagerImpl);
+    }
 
-
+    @Override
     public void login(String userInfo) {
         //messagerImpl.playSound("sound");
-       //....
-       // messagerImpl.connect("connect");
+        //....
+        // messagerImpl.connect("connect");
     }
 
-
+    @Override
     public void sendMessage(String message) {
-       // messagerImpl.writeText("text");
-      //  messagerImpl.playSound("sound");
+        // messagerImpl.writeText("text");
+        //  messagerImpl.playSound("sound");
 
     }
 
-
+    @Override
     public void sendPicture(String picture) {
         //messagerImpl.playSound("sound");
         //messagerImpl.drawShap("shap");

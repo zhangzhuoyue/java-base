@@ -7,11 +7,11 @@ import com.zzy.singleresposibility.bridge.template3.code.MessagerImpl;
  * @description  软件通信模块-登录功能
  * @date 2020/7/19 18:02
  */
-public abstract class Messager {
+public abstract class Messagers {
 
     public  MessagerImpl messagerImpl;
 
-    public Messager(MessagerImpl messagerImpl) {
+    public Messagers(MessagerImpl messagerImpl) {
         this.messagerImpl = messagerImpl;
     }
 

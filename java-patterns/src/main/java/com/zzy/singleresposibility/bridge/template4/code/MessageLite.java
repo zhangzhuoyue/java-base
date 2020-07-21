@@ -8,7 +8,7 @@ import com.zzy.singleresposibility.bridge.template3.code.MessagerImpl;
  * @date 2020/7/20 21:19
  */
 //业务抽象
-public class MessageLite extends Messager {
+public class MessageLite extends Messagers {
 
     public MessageLite(MessagerImpl messagerImpl) {
         super(messagerImpl);
