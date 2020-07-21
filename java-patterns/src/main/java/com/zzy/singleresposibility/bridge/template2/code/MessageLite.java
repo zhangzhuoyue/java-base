@@ -5,9 +5,10 @@ package com.zzy.singleresposibility.bridge.template2.code;
  * @description 手机和电脑端 的基础功能实现，使用组合来动态实现
  * @date 2020/7/20 21:19
  */
+//业务抽象
 public class MessageLite {
 
-    private Messager messager;//这里可以是 new PCMessageLite()  也可以是 new MobileMessageLite()
+    private Messager messager;//这里可以是 new PCMessageBase()  也可以是 new MobileMessageBase()
 
     public MessageLite(Messager messager) {
         this.messager = messager;

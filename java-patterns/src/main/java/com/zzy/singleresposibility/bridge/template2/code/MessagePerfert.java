@@ -5,9 +5,10 @@ package com.zzy.singleresposibility.bridge.template2.code;
  * @description 手机和电脑端 的多功能实现，使用组合来动态实现
  * @date 2020/7/20 21:21
  */
+//业务抽象
 public class MessagePerfert {
 
-    private Messager messager;//这个可以是 new MobileMessagePerfert() ,也可以是new  PCMessagerPerfect()
+    private Messager messager;//这个可以是 new MobileMessageBase() ,也可以是new  PCMessagerBase()
 
     public MessagePerfert(Messager messager){
         this.messager = messager;

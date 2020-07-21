@@ -1,1 +1,5 @@
-1. MobileMessageLite、PCMessageLite
+1. MobileMessageLite、PCMessageLite出现了类似的重复结构（他们都使用相同的虚函数），使用组合的方式可以动态组装，在相同结构下，动态实现不同的
+功能
+
+2. 接口职责上考虑，MobileMessagerBase只实现了部分的Messager功能，另一部分功能没有实现。从功能上他们不是紧密相关的，所以将需要Messager中功能再次分割
+在template3中实现
