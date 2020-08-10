@@ -6,7 +6,7 @@ import com.zzy.factorypattern.abstractfactory.template3.operation.IDataReader;
 
 /**
  * @author zhangyue666
- * @description
+ * @description 抽象工厂 创建一系列有关联对象
  * @date 2020/8/10 21:27
  */
 public interface IDataFactory {
