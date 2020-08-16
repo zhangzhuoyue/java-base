@@ -23,4 +23,8 @@ public class FlyWeight {
             return font1;
         }
     }
+
+    public void clear(){
+        //清除缓存内容
+    }
 }
