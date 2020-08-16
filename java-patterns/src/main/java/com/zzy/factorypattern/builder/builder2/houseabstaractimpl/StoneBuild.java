@@ -17,11 +17,14 @@ public class StoneBuild extends HouseBuild {
     @Override
     public void buildPart1() {
         //对传入的house实例进行状态初始化
+        //phouse.getxxx();
+        //
     }
 
     @Override
     public void buildPart2() {
 //对传入的house实例进行状态初始化
+        //phouse.setxx();
     }
 
     @Override
