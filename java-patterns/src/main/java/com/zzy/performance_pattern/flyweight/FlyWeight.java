@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class FlyWeight {
 
-    private Map<String,Font> fontMap = new HashMap<>();
+    private Map<String,Font> fontMap = new HashMap<>();//对象池
 
     public Font getFont(String key){
         Font font = fontMap.get(key);
