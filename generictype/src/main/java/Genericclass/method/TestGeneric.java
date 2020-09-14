@@ -14,9 +14,9 @@ public class TestGeneric<E> {
     public void test1(){
         //TreeSet
         List<Student> studentList = new ArrayList<>();
-        List<Persion> persionList = new ArrayList<>();
+        studentList.add(new Student());
         add(studentList);
-        add(persionList);
+
     }
     /**
      * <?> 无限定通配符,内部调用的元素方法是Object的方法。

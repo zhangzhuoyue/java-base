@@ -10,7 +10,7 @@ import org.junit.Test;
 public class Bound {
 
     public <T extends Persion> T find(T t){
-        t.findNamre("");
+        t.findNamre(3);
         String k = ";";
         return t;
     }
@@ -18,7 +18,7 @@ public class Bound {
    @Test
     public void test(){
        Student student = find(new Student());
-       student.find("");
+       //student.find("");
    }
 
 }

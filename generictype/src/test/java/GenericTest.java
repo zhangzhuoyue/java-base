@@ -1,4 +1,4 @@
-import Genericclass.Persion;
+import Genericclass.method.Persion;
 import genericmethod.GenericMethod;
 import org.junit.Test;
 import sun.security.x509.GeneralName;
