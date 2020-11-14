@@ -30,5 +30,6 @@ public class Collection_intersection {
         boolean b = list1.retainAll(list2);
         System.out.println(b);
         System.out.println(list1);
+        System.out.println(list1);
     }
 }

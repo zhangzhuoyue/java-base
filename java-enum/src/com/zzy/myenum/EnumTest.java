@@ -27,6 +27,8 @@ public class EnumTest {
         ResponseEnum responseEnum = Enum.valueOf(ResponseEnum.class, "SUCCESS_STATUS");
         System.out.println(responseEnum.toString());
         System.out.println(responseEnum.getCode());
+        System.out.println("中文一年已经");
+        System.out.println("zhongwen yingai de dansi ");
 
     }
 }
