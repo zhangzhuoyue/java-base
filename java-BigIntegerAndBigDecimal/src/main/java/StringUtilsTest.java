@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * @desc StringUtils  isEmpty  isBlock
  * @time 2020/11/24 9:31
  **/
-public class Mini {
+public class StringUtilsTest {
     public static void main(String[] args) {
         String kk = " ";
         int length = kk.length();
