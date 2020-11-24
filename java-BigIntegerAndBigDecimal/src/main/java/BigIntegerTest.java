@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.StringUtils;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
@@ -23,12 +25,13 @@ public class BigIntegerTest {
         System.out.println(big1.compareTo(big2));//比较  ，big1和big2相等，返回0；big1大于big2返回正数，big1小于big2返回负数*/
 
 
-        BigDecimal decimal1 = BigDecimal.valueOf(1.21);
+       /* BigDecimal decimal1 = BigDecimal.valueOf(1.21);
         BigDecimal decimal2 = BigDecimal.valueOf(-1.1);
         System.out.println(decimal1.add(decimal2).floatValue());
         System.out.println(decimal2.subtract(decimal2).setScale(1,BigDecimal.ROUND_UP));//减法，setScale()设置小数点精度
         System.out.println(decimal1.multiply(decimal2,MathContext.DECIMAL128).doubleValue());
-        System.out.println(decimal1.divide(decimal2,2,BigDecimal.ROUND_HALF_UP));
+        System.out.println(decimal1.divide(decimal2,2,BigDecimal.ROUND_HALF_UP));*/
+
 
     }
 
