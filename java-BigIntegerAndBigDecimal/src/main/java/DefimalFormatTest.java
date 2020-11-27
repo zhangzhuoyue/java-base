@@ -31,5 +31,10 @@ public class DefimalFormatTest {
         System.out.println(new DecimalFormat(",###").format(c));  //299,792,458
         //将格式嵌入文本
         System.out.println(new DecimalFormat("光速大小为每秒,###米。").format(c));
+
+        double pk =3433451.0002323;//###,##0.00    3,433,451.00
+        double pm =0.1002323;//#0.00   整数部分的0不会丢失，保留两位小数，四舍五入
+        System.out.println(new DecimalFormat("#0.##").format(pm));
+        //# 占位符，有数字展示，没有不显示。 0 占位符，有数字展示 ，没有数字用0展位
     }
 }
