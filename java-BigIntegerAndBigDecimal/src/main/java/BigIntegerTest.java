@@ -32,6 +32,10 @@ public class BigIntegerTest {
         System.out.println(decimal1.multiply(decimal2,MathContext.DECIMAL128).doubleValue());
         System.out.println(decimal1.divide(decimal2,2,BigDecimal.ROUND_HALF_UP));*/
 
+        BigInteger big = new BigInteger("234");
+        BigInteger one = BigInteger.ONE;
+        BigInteger zero = BigInteger.ZERO;
+        int i = zero.intValue();
 
     }
 
