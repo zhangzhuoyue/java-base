@@ -34,6 +34,9 @@
   					(o2 == null ? -1 : o1.compareTo(o2));*/
   		}
   	});
+  	
+  	使用java8的Strean流实现
+  	
 
 
 
