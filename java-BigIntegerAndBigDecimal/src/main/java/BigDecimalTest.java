@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 /**
  * BigDecimalTest
  *
@@ -8,6 +10,7 @@
 public class BigDecimalTest {
 
     public static void main(String[] args) {
-
+       //创建
+        new BigDecimal("");
     }
 }
