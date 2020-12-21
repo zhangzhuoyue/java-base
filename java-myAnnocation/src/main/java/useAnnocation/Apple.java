@@ -4,6 +4,7 @@ import annocation.FruitColor;
 import annocation.FruitColor.Color;
 import annocation.FruitName;
 import annocation.FruitNumber;
+import annocation.FruitProver;
 import jdk.nashorn.internal.objects.annotations.Constructor;
 
 /**
@@ -16,35 +17,47 @@ import jdk.nashorn.internal.objects.annotations.Constructor;
 
 public class Apple {
 
-  @FruitColor(fruitColor = Color.BLUE)
-  private String fruitColor;
+    @FruitColor(fruitColor = Color.BLUE)
+    private String fruitColor;
 
-  @FruitName(fruitName = "苹果")
-  private String fruitName;
-  @FruitNumber(number = 23)
-  private int fruitNumber;
+    @FruitName(fruitName = "苹果")
+    private String fruitName;
 
-  public String getFruitColor() {
-    return fruitColor;
-  }
+    @FruitNumber(number = 23)
+    private int fruitNumber;
 
-  public void setFruitColor(String fruitColor) {
-    this.fruitColor = fruitColor;
-  }
+    @FruitProver(id = 2, name = "zz", address = "zz")
+    private String fruitProver;
 
-  public String getFruitName() {
-    return fruitName;
-  }
+    public String getFruitProver() {
+        return fruitProver;
+    }
 
-  public void setFruitName(String fruitName) {
-    this.fruitName = fruitName;
-  }
+    public void setFruitProver(String fruitProver) {
+        this.fruitProver = fruitProver;
+    }
 
-  public int getFruitNumber() {
-    return fruitNumber;
-  }
+    public String getFruitColor() {
+        return fruitColor;
+    }
 
-  public void setFruitNumber(int fruitNumber) {
-    this.fruitNumber = fruitNumber;
-  }
+    public void setFruitColor(String fruitColor) {
+        this.fruitColor = fruitColor;
+    }
+
+    public String getFruitName() {
+        return fruitName;
+    }
+
+    public void setFruitName(String fruitName) {
+        this.fruitName = fruitName;
+    }
+
+    public int getFruitNumber() {
+        return fruitNumber;
+    }
+
+    public void setFruitNumber(int fruitNumber) {
+        this.fruitNumber = fruitNumber;
+    }
 }
