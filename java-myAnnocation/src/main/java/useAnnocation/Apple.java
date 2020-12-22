@@ -26,7 +26,7 @@ public class Apple {
     @FruitNumber(number = 23)
     private int fruitNumber;
 
-    @FruitProver(id = 2, name = "zz", address = "zz")
+    @FruitProver(id = 2, name = " 张三 ", address = " 水里 ")
     private String fruitProver;
 
     public String getFruitProver() {
