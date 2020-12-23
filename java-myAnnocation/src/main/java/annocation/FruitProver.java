@@ -17,6 +17,8 @@ import java.lang.annotation.Target;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface FruitProver {
+    public enum Color {BLUE, GREEN};
+
     //供应商编号
     public int id() default -1;
 

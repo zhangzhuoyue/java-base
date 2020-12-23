@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface FruitColor {
 
-    public enum Color {BLUE, GREEN}
+    public enum Color {BLUE, GREEN};
 
     Color fruitColor() default Color.GREEN;
 
