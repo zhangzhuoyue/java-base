@@ -29,11 +29,12 @@ public class Apple {
     @FruitProver(id = 2, name = " 张三 ", address = " 水里 ")
     private String fruitProver;
 
+
     public String getFruitProver() {
         return fruitProver;
     }
 
-    public void setFruitProver(String fruitProver) {
+    public void setFruitProver( String fruitProver) {
         this.fruitProver = fruitProver;
     }
 

@@ -16,10 +16,19 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
+/**
+ * 每个注解都必须通过一个注解接口进行定义
+ */
 public @interface FruitColor {
 
     public enum Color {BLUE, GREEN};
 
+    /**
+     * 接口中的方法与注解中的元素相对应
+     * @FruitColor(fruitColor=Color.Blue)
+     *
+     * @return
+     */
     Color fruitColor() default Color.GREEN;
 
 }
