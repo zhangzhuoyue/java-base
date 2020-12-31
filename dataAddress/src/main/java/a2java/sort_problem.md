@@ -1,4 +1,5 @@
-1. Collections.sort(List , comparator):
+1. **Collections.sort(List , comparator):集合比较尽量使用这个方法**
+
     ```
    问题：实现comparator接口，制定排序规则，如果排序参数中有可能有null，则会报java.lang.IllegalArgumentException: Comparison method violates its general contract!
    原因：代码报错可能因为我们比较器不够严谨，返回值需要包括1、-1、0；需要考虑参数为null的情况。
