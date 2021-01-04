@@ -5,6 +5,8 @@ import org.omg.CORBA.IntHolder;
  * @data 2021/1/4
  * Integer    无法将修改数据传递，因为value属性是 final ，每次修改创建一个新的值
  * IntHolder  可以将修改数据传递，因为value属性非 final ，每次修改共用一个地址
+ * DoubleHolder
+ * ShortHolder
  */
 public class TestHolder {
 
