@@ -1,6 +1,6 @@
-package aVariable;
+package a1_lambda.aVariable;
 
-import test.LambdaInterfaces;
+import a1_lambda.test.LambdaInterfaces;
 
 /**
  * @author zzy

@@ -1,4 +1,4 @@
-package test;
+package a1_lambda.test;
 
 @FunctionalInterface
 public interface LambdaInterfaces {

@@ -1,4 +1,4 @@
-package test;
+package a1_lambda.test;
 
 import org.apache.commons.lang.StringUtils;
 
