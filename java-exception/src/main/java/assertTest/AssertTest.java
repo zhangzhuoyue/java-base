@@ -18,3 +18,6 @@ public class AssertTest {
         }
     }
 }
+/**
+ * 断言默认不开启的，程序的中的断言默认都忽略，-enableassertions 加入启动参数后断言生效
+ */
