@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zzy</groupId>
-    <artifactId>intHolder</artifactId>
+    <artifactId>holderType</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
