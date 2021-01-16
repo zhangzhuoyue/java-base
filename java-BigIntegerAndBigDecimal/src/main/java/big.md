@@ -14,19 +14,7 @@
      BigInteger i = new BigInteger("123456789000");
      System.out.println(i.longValue()); // 123456789000
      System.out.println(i.multiply(i).longValueExact()); // java.lang.ArithmeticException: BigInteger out of long range
-   
     ```
 
 
-4. BigInteger类型转换
-    ```
-     转换为byte：byteValue()
-     转换为short：shortValue()
-     转换为int：intValue()
-     转换为long：longValue()
-     转换为float：floatValue()
-     转换为double：doubleValue()
-   ```
-5. 转换异常
-   1.   byteValue() ... BigInteger表示的范围超过了基本类型的范围，转换时将丢失高位信息，即结果不一定是准确的
-   2.   intValueExact()、longValueExact() 在转换时如果超出范围，将直接抛出ArithmeticException异常
+4. BigInteger类型转换j

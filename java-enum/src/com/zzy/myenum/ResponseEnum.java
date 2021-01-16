@@ -8,11 +8,11 @@ public enum ResponseEnum {
      * 3. 构造器默认的权限修饰符 private
      */
     //查询用户成功返回码
-    SUCCESS_STATUS("200","成功"),
+    SUCCESS_STATUS("200", "成功"),
     //查询用户失败返回码
-    ERROR_STATUS("100","失败"),
+    ERROR_STATUS("100", "失败"),
     //权限验证未通过
-    ERROR_AUTHORITY("300","用户没有权限");
+    ERROR_AUTHORITY("300", "用户没有权限");
 
     //返回码
     private String code;
@@ -20,15 +20,15 @@ public enum ResponseEnum {
     private String msg;
 
     //构造函数
-    ResponseEnum(String code,String msg) {
+    ResponseEnum(String code, String msg) {
         this.code = code;
         this.msg = msg;
     }
 
     //根据code值获取枚举对象
-    public ResponseEnum getEnumByCode(String code){
+    public ResponseEnum getEnumByCode(String code) {
         ResponseEnum[] enums = ResponseEnum.values();
-        for (ResponseEnum responseEnum : enums){
+        for (ResponseEnum responseEnum : enums) {
             if (code != null && code.equals(responseEnum.getCode())) return responseEnum;
         }
         return null;
