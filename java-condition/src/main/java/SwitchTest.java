@@ -5,7 +5,7 @@ import java.beans.beancontext.BeanContext;
  * @description  switch  匹配枚举
  * @date 2020/11/15 21:08
  */
-public class SwitchTest {
+public class SwitchTest{
     public static void main(String[] args) {
         MyEnum address = MyEnum.ADDRESS;
         switch (address){
